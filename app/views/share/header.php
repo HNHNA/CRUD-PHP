@@ -375,7 +375,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr>    
                                             <th>Name</th>
                                             <th>Position</th>
                                             <th>Office</th>
@@ -384,16 +384,19 @@
                                             <th>Salary</th>
                                         </tr>
                                     </thead>
-                                    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-                                    <tbody>
-                                        <tr>
-                                        <td><?php echo $row['id']; ?></td>
-                                        <td><?php echo $row['name']; ?></td>
-                                        <td><?php echo $row['description']; ?></td>
-                                        <td><?php echo $row['price']; ?></td>
-                                        </tr>
-                                    </tbody>
-                                    <?php endwhile; ?>
+                                    <?php if ($stmt !== null) : ?>
+                                        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+                                            <!-- Hiển thị dữ liệu -->
+                                            <tbody>
+                                                <tr>
+                                                <td><?php echo $row['id']; ?></td>
+                                                <td><?php echo $row['name']; ?></td>
+                                                <td><?php echo $row['description']; ?></td>
+                                                <td><?php echo $row['price']; ?></td>
+                                                </tr>
+                                            </tbody>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
                             </table>
                         </div>
                     </div>
@@ -403,4 +406,3 @@
     </div>
 </div>
 
-    
