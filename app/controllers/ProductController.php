@@ -2,14 +2,14 @@
 class ProductController{
     public function Index() {
 
-        // $database = new Database();
-        // $db = $database->getConnection();
+        $database = new Database();
+        $db = $database->getConnection();
 
-        // $product = new ProductModel($db);
+        $product = new ProductModel($db);
         
-        // $stmt = $product->readAll();
+        $stmt = $product->readAll();
 
-        // include_once 'app/views/product/list.php';
+        include_once 'app/views/share/header.php';
 
     }
 }

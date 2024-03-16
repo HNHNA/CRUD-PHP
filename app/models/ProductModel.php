@@ -8,11 +8,10 @@ class ProductModel{
     }
 
     function readAll() {
-        $query = "SELECT id, name, description, price FROM " . $this->table_name;
-
+        // $query = "SELECT id, name, description, price FROM " . $this->table_name;
+        $query = "SELECT * FROM students";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-
-        return $stmt;
+        return $query;
     }
 }
