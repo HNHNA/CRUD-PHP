@@ -22,8 +22,8 @@ class Database {
             echo "Kết nối thành công!";
         } else {
             echo "Kết nối không thành công!";
-        }
-        
+        }    
         return $this->conn;
+        
     }
 }

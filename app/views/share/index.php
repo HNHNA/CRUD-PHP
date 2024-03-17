@@ -19,7 +19,7 @@ include_once 'header.php'
                         <th></th>
                     </tr>
                     </thead>
-                    <tfoot>
+               
                     <tr>
                     <th>Id</th>
                         <th>Name</th>
@@ -28,17 +28,20 @@ include_once 'header.php'
                         <th></th>
                         <th></th>
                     </tr>
-                    </tfoot>
-                    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-                        <tbody>
+                    <tbody>
+                    <?php
+                    include "config/Database.php";
+                    $sql = "SELECT * FROM `products`";
+                    $result = mysqli_query($stmt,$sql);
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                             <tr>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['description']; ?></td>
                             <td><?php echo $row['price']; ?></td>
                             </tr>
-                        </tbody>
                     <?php endwhile; ?>
+                    </tbody>
                 </table>
             </div>
         </div>
