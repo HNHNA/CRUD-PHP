@@ -10,7 +10,7 @@ class ProductController{
         $stmt = $product->readAll();
 
         // include_once 'app/views/share/header.php';
-        include_once 'app/views/product/list.php';
+        include_once 'app/views/share/header.php';
 
 
     }
