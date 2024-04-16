@@ -1,3 +1,5 @@
 # CRUD-PHP
-Đinh Tiến Thịnh - 2011061069
-Nguyễn Thanh Quân - 2011068711
+<h1>Đinh Tiến Thịnh </h1>
+<h2> 2011061069</h2>
+<h1>Nguyễn Thanh Quân </h1>
+<h2>2011068711</h2>
